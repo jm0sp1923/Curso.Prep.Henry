@@ -1,5 +1,10 @@
 // No cambies los nombres de las funciones.
 
+const { GitResponseError } = require("simple-git");
+const { isGeneratorFunction } = require("util/types");
+const { getEnvironmentData } = require("worker_threads");
+const { redondearHaciaArriba } = require("../../02-JS-I/homework/homework");
+
 function obtenerMayor(x, y) {
   // "x" e "y" son números enteros (int).
   // Devuelve el número más grande
@@ -43,8 +48,13 @@ function saludo(idioma) {
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
   
-  
-
+  if(idioma == 'aleman'){
+    return 'Guten Tag!';
+  }else  if(idioma == 'mandarin'){
+    return 'Ni Hao!';
+  }else  if(idioma == 'ingles'){
+    return 'Hello!';
+  }else return 'Hola!';
 
 }
 
@@ -56,6 +66,23 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  switch (color) {
+    case 'blue':
+      return 'This is blue';
+      break;
+    case 'red':
+      return 'This is red'
+      break;
+    case 'green':
+      return 'This is green'
+      break;
+    case 'orange':
+        return 'This is orange'
+      break;  
+    default:
+      return 'Color not found'
+      break;
+  }
  
 }
 
