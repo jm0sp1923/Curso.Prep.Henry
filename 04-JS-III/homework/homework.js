@@ -10,6 +10,7 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  return array[array.length-1];
   
 } 
 
@@ -18,7 +19,7 @@ function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
 
-
+  return array.length;
 
 
 }
@@ -29,6 +30,15 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  var nuevoArray = [];
+
+    for(var i = 0; i<array.length; i++){
+        
+       nuevoArray.push(array[i] + 1);
+    }
+    return nuevoArray;
+
+
 }
 
 
@@ -36,6 +46,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento)
+  return array;
+
 }
 
 
@@ -44,6 +57,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento)
+  return array;
 }
 
 
@@ -53,6 +68,14 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  var union = '';
+  for(var i = 0; i<palabras.length; i++){
+        union +=  palabras[i];
+        if(i<(palabras.length - 1)){
+        union += ' ';
+      }
+  }
+  return union;
 }
 
 
@@ -60,6 +83,15 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  var existe = false;
+    for(var i = 0;i<array.length;i++){
+      if(array[i] == elemento){
+          existe = true;
+      }
+    }
+
+    return existe;
+
 }
 
 
